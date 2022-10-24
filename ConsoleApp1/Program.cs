@@ -5,7 +5,7 @@ class Program
     public static void Main()
     {
         Film gen = new Film();
-        gen.Genre("fantasy");
+        gen.Genre();
 
     }
 
@@ -59,27 +59,32 @@ class Program
             [14] = "The House That Jack Built"
         };
 
-
-        public void Genre(string genre)
+        public void Genre()
         {
             Random rand = new Random();
 
-            switch (genre)
+            Console.WriteLine("Please select the genre of the movie. Currently, the following genres are available: drama, thriller and fantasy. ");
+            string? option = Console.ReadLine();
+
+            switch (option)
             {
                 case "drama":
-                    int rnd = rand.Next(1, dr.Count);
-                    Console.WriteLine(dr[rnd]);
+                    int rnd = rand.Next(1, dr.Count + 1);
+                    string film = dr[rnd];
+                    Console.WriteLine($"The genre you have chosen: {option}. Recommended movie for you: {film}.");
                     break;
                 case "fantasy":
-                    int rnd1 = rand.Next(1, fn.Count);
-                    Console.WriteLine(fn[rnd1]);
-                    break;
+                    int rnd1 = rand.Next(1, fn.Count + 1);
+                    string film1 = fn[rnd1];
+                    Console.WriteLine($"The genre you have chosen: {option}. Recommended movie for you: {film1}.");
+                    return ;
                 case "thriller":
-                    int rnd2 = rand.Next(1, thr.Count);
-                    Console.WriteLine(thr[rnd2]);
+                    int rnd2 = rand.Next(1, thr.Count + 1);
+                    string film2 = thr[rnd2];
+                    Console.WriteLine($"The genre you have chosen: {option}. Recommended movie for you: {film2}.");
                     break;
                 default:
-                    Console.WriteLine("Такого жанра в базе нет, извините");
+                    Console.WriteLine("There is no such genre in the database, sorry.");
                     break;
             };
             }
