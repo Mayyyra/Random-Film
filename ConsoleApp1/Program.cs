@@ -22,7 +22,8 @@ class Program
             [7] = "The Boy in the Striped Pyjamas",
             [8] = "Hidden Figures",
             [9] = "Одна - The One",
-            [10] = "Судьба человека - Fate of a Man"
+            [10] = "Судьба человека - Fate of a Man",
+            [11] = "I Origins"
         };
         Dictionary<int, string> fn = new Dictionary<int, string>()
         {
@@ -37,7 +38,8 @@ class Program
             [9] = "The Mummy",
             [10] = "King Arthur: Legend of the Sword",
             [11] = "Snow White and the Huntsman",
-            [12] = "Constantine"
+            [12] = "Constantine",
+            [13] = "The Chronicles of Narnia"
         };
         Dictionary<int, string> thr = new Dictionary<int, string>()
         {
